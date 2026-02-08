@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tsvetik</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Tsvetik</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Контакты</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;h2 id=&#34;как-заказать&#34;&gt;Как заказать&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Телефон:&lt;/strong&gt; +7 920 135-00-41&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:matvey.s1307@gmail.com&#34;&gt;matvey.s1307@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Город:&lt;/strong&gt; Рыбинск, Ярославская область&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;режим-работы&#34;&gt;Режим работы&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Пн-Пт:&lt;/strong&gt; 10:00 - 19:00&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Сб-Вс:&lt;/strong&gt; 11:00 - 17:00&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Заказы принимаются по телефону или через электронную почту.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Обо мне</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Привет! Я создаю глиняные изделия в Рыбинске. Каждое изделие создаётся с любовью и вниманием к деталям.&lt;/p&gt;&#xA;&lt;h2 id=&#34;моя-философия&#34;&gt;Моя философия&lt;/h2&gt;&#xA;&lt;p&gt;Создавать уникальные вещи, которые приносят радость и уют в ваш дом.&lt;/p&gt;&#xA;&lt;h2 id=&#34;моя-история&#34;&gt;Моя история&lt;/h2&gt;&#xA;&lt;p&gt;Всё началось с маленькой мастерской, где я экспериментировала с разными формами и текстурами. Сейчас мои работы находят своих ценителей по всей России.&lt;/p&gt;&#xA;&lt;h2 id=&#34;контакты&#34;&gt;Контакты&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Телефон:&lt;/strong&gt; +7 920 135-00-41&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:matvey.s1307@gmail.com&#34;&gt;matvey.s1307@gmail.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Город:&lt;/strong&gt; Рыбинск, Ярославская область&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

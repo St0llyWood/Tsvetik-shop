@@ -1,0 +1,81 @@
+{{ define "main" }}
+<!-- Герой секция -->
+<section class="hero">
+    <div class="container">
+        <h1>Цветик глиняные изделия</h1>
+        <p>
+            Магазин глиняных изделий ручной работы.<br>
+            Создано с любовью в Рыбинске.
+        </p>
+        <a href="#products" class="btn-primary">
+            <i class="fas fa-gem"></i> Смотреть работы
+        </a>
+    </div>
+</section>
+
+<!-- Товары -->
+<section id="products" class="products-section">
+    <h2 class="section-title">Наши изделия</h2>
+    <div class="products-grid">
+        <!-- Кольцо -->
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="/images/kolco.jpg" alt="Кольцо из глины" class="product-image">
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">Кольцо из глины</h3>
+                <p class="product-description">Минималистичное кольцо ручной работы. Подходит на любой палец.</p>
+                <div class="product-price">850</div>
+                <button class="btn-order" data-product="Кольцо из глины">
+                    <i class="fas fa-shopping-cart"></i> Заказать
+                </button>
+            </div>
+        </div>
+
+        <!-- Зажигалка -->
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="/images/zazhigalka.jpg" alt="Зажигалка" class="product-image">
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">Зажигалка</h3>
+                <p class="product-description">Уникальная зажигалка ручной работы. Не просто функционально, но и красиво.</p>
+                <div class="product-price">700</div>
+                <button class="btn-order" data-product="Зажигалка">
+                    <i class="fas fa-shopping-cart"></i> Заказать
+                </button>
+            </div>
+        </div>
+
+        <!-- Амулет -->
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="/images/amulet.jpg" alt="Амулет" class="product-image">
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">Амулет</h3>
+                <p class="product-description">Стильное колье на кожаном шнурке. Универсальное украшение.</p>
+                <div class="product-price">950</div>
+                <button class="btn-order" data-product="Амулет">
+                    <i class="fas fa-shopping-cart"></i> Заказать
+                </button>
+            </div>
+        </div>
+
+        <!-- Магниты -->
+        <div class="product-card">
+            <div class="product-img-container">
+                <img src="/images/magnity.jpg" alt="Магниты Листья" class="product-image">
+            </div>
+            <div class="product-content">
+                <h3 class="product-title">Магниты "Листья"</h3>
+                <p class="product-description">Набор магнитных листочков для холодильника. Осеннее настроение.</p>
+                <div class="product-price">800</div>
+                <button class="btn-order" data-product="Магниты 'Листья'">
+                    <i class="fas fa-shopping-cart"></i> Заказать
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

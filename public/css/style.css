@@ -6,36 +6,13 @@
 }
 
 body {
-    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.7;
-    color: #5a5560;
-    background: linear-gradient(135deg, 
-        #fff9fb 0%, 
-        #fff5f8 25%, 
-        #fff0f3 50%, 
-        #ffecf0 75%, 
-        #ffe8ed 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #555;
+    background: linear-gradient(135deg, #fff9fb 0%, #fff0f5 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow-x: hidden;
-}
-
-/* Декоративные элементы фона */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(circle at 20% 80%, rgba(255, 182, 193, 0.15) 0px, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 182, 193, 0.1) 0px, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(255, 182, 193, 0.08) 0px, transparent 50%);
-    z-index: -1;
-    pointer-events: none;
 }
 
 /* Container */
@@ -47,14 +24,14 @@ body::before {
 
 /* Header - более элегантный */
 .site-header {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 4px 30px rgba(255, 107, 139, 0.15);
-    padding: 18px 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(255, 107, 139, 0.08);
+    padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 214, 224, 0.4);
+    border-bottom: 1px solid rgba(255, 214, 224, 0.3);
 }
 
 .header-container {
@@ -64,26 +41,18 @@ body::before {
 }
 
 .logo {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 800;
-    color: transparent;
+    color: #ff6b8b;
     text-decoration: none;
     letter-spacing: 1px;
-    background: linear-gradient(45deg, #ff6b8b, #ff8e53, #ff6b8b);
-    background-size: 200% auto;
+    background: linear-gradient(45deg, #ff6b8b, #ff8e53);
     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: gradient 3s ease infinite;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-@keyframes gradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Navigation */
+/* Navigation - более стильная */
 .main-nav ul {
     display: flex;
     list-style: none;
@@ -93,12 +62,11 @@ body::before {
 .main-nav a {
     text-decoration: none;
     color: #666;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 500;
     transition: all 0.3s ease;
     padding: 8px 0;
     position: relative;
-    letter-spacing: 0.5px;
 }
 
 .main-nav a:hover {
@@ -109,12 +77,13 @@ body::before {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0;
     height: 3px;
     background: linear-gradient(90deg, #ff6b8b, #ff8e53);
     border-radius: 3px;
-    transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition: width 0.3s ease;
 }
 
 .main-nav a:hover::after {
@@ -123,16 +92,12 @@ body::before {
 
 /* Hero section - более красивый */
 .hero {
-    background: linear-gradient(135deg, 
-        rgba(255, 214, 224, 0.85) 0%, 
-        rgba(255, 239, 243, 0.85) 100%);
-    padding: 120px 0;
+    background: linear-gradient(135deg, rgba(255, 214, 224, 0.9) 0%, rgba(255, 239, 243, 0.9) 100%);
+    padding: 100px 0;
     text-align: center;
     margin-bottom: 80px;
     position: relative;
     overflow: hidden;
-    border-radius: 0 0 40px 40px;
-    box-shadow: 0 20px 60px rgba(255, 107, 139, 0.15);
 }
 
 .hero::before {
@@ -140,87 +105,60 @@ body::before {
     position: absolute;
     top: -50%;
     right: -50%;
-    width: 200%;
+    width: 100%;
     height: 200%;
-    background: radial-gradient(circle, 
-        rgba(255, 255, 255, 0.4) 1px, 
-        transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.4;
-    animation: float 20s linear infinite;
-}
-
-@keyframes float {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(-50px, -50px) rotate(360deg); }
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.3;
 }
 
 .hero h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     color: #5a5560;
     margin-bottom: 25px;
     font-weight: 700;
     position: relative;
     z-index: 2;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.08);
-    letter-spacing: -0.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .hero p {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     color: #777;
-    margin-bottom: 45px;
-    max-width: 650px;
+    margin-bottom: 40px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.8;
     position: relative;
     z-index: 2;
-    opacity: 0.9;
 }
 
 .btn-primary {
     display: inline-flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     background: linear-gradient(135deg, #ff6b8b 0%, #ff8e53 100%);
     color: white;
-    padding: 20px 50px;
+    padding: 18px 45px;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 600;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.4s ease;
     border: none;
     position: relative;
     z-index: 2;
-    box-shadow: 0 10px 30px rgba(255, 107, 139, 0.3);
-    overflow: hidden;
-}
-
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: 0.5s;
-}
-
-.btn-primary:hover::before {
-    left: 100%;
+    box-shadow: 0 8px 25px rgba(255, 107, 139, 0.3);
 }
 
 .btn-primary:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 20px 40px rgba(255, 107, 139, 0.4);
-    letter-spacing: 1px;
+    box-shadow: 0 15px 35px rgba(255, 107, 139, 0.4);
 }
 
 .btn-primary i {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 /* Products section */
@@ -229,18 +167,16 @@ body::before {
     max-width: 1400px;
     margin: 0 auto;
     width: 100%;
-    position: relative;
 }
 
 .section-title {
     text-align: center;
     color: #5a5560;
-    font-size: 2.8rem;
-    margin-bottom: 70px;
-    padding-bottom: 25px;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
     position: relative;
     font-weight: 700;
-    letter-spacing: -0.5px;
 }
 
 .section-title::after {
@@ -249,39 +185,68 @@ body::before {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 180px;
-    height: 5px;
+    width: 150px;
+    height: 4px;
     background: linear-gradient(90deg, #ff6b8b, #ff8e53);
-    border-radius: 3px;
-    box-shadow: 0 4px 15px rgba(255, 107, 139, 0.3);
+    border-radius: 2px;
 }
 
-/* Products grid */
+/* Products grid - ИСПРАВЛЕННАЯ СЕТКА */
 .products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 40px;
-    margin-top: 40px;
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
 }
 
-/* Product card - СУПЕР СТИЛЬНЫЕ */
+/* Для десктопа - 4 в ряд */
+@media (min-width: 1200px) {
+    .product-card {
+        flex: 0 0 calc(25% - 30px); /* 4 карточки в ряд */
+        max-width: calc(25% - 30px);
+    }
+}
+
+/* Для ноутбуков - 3 в ряд */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .product-card {
+        flex: 0 0 calc(33.333% - 30px); /* 3 карточки в ряд */
+        max-width: calc(33.333% - 30px);
+    }
+}
+
+/* Для планшетов - 2 в ряд */
+@media (min-width: 768px) and (max-width: 991px) {
+    .product-card {
+        flex: 0 0 calc(50% - 30px); /* 2 карточки в ряд */
+        max-width: calc(50% - 30px);
+    }
+}
+
+/* Для мобильных - 1 в ряд */
+@media (max-width: 767px) {
+    .product-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Product card - СТИЛЬНЫЕ */
 .product-card {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
+    background: white;
     border-radius: 25px;
     padding: 30px;
+    width: 300px;
+    min-height: 520px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    min-height: 540px;
+    border: 1px solid rgba(255, 214, 224, 0.3);
 }
 
 .product-card::before {
@@ -290,41 +255,35 @@ body::before {
     top: 0;
     left: 0;
     right: 0;
-    height: 6px;
-    background: linear-gradient(90deg, #ff6b8b, #ff8e53, #ff6b8b);
-    background-size: 200% auto;
-    animation: gradient 3s ease infinite;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b8b, #ff8e53);
 }
 
 .product-card:hover {
-    transform: translateY(-20px) scale(1.02);
-    box-shadow: 
-        0 30px 60px rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.9);
-    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Product image */
 .product-img-container {
     width: 100%;
-    height: 270px;
+    height: 260px;
     margin-bottom: 25px;
     overflow: hidden;
     border-radius: 20px;
     background: linear-gradient(135deg, #f9f7f7 0%, #f0f0f0 100%);
     position: relative;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .product-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: transform 0.6s ease;
 }
 
 .product-card:hover .product-image {
-    transform: scale(1.12);
+    transform: scale(1.1);
 }
 
 /* Product content */
@@ -335,44 +294,37 @@ body::before {
     width: 100%;
     align-items: center;
     text-align: center;
-    padding: 0 10px;
 }
 
 .product-title {
-    font-size: 1.55rem;
+    font-size: 1.5rem;
     color: #5a5560;
     margin-bottom: 15px;
     font-weight: 700;
     line-height: 1.3;
-    letter-spacing: -0.3px;
 }
 
 .product-description {
     color: #777;
-    font-size: 1.08rem;
-    line-height: 1.7;
+    font-size: 1.05rem;
+    line-height: 1.6;
     margin-bottom: 25px;
     flex-grow: 1;
-    opacity: 0.9;
 }
 
 .product-price {
-    font-size: 2.2rem;
-    color: transparent;
+    font-size: 2rem;
+    color: #ff6b8b;
     font-weight: 800;
     margin: 25px 0;
     position: relative;
     display: inline-block;
-    background: linear-gradient(45deg, #ff6b8b, #ff8e53);
-    -webkit-background-clip: text;
-    background-clip: text;
 }
 
 .product-price::before {
     content: '₽';
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-right: 5px;
-    color: #ff6b8b;
 }
 
 /* Order button */
@@ -380,74 +332,40 @@ body::before {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     background: linear-gradient(135deg, #ff6b8b 0%, #ff8e53 100%);
     color: white;
     border: none;
-    padding: 18px 40px;
+    padding: 16px 35px;
     border-radius: 50px;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: all 0.3s ease;
     text-decoration: none;
     width: 100%;
-    max-width: 280px;
+    max-width: 250px;
     margin: 0 auto;
     font-weight: 600;
-    box-shadow: 0 8px 25px rgba(255, 107, 139, 0.25);
-    position: relative;
-    overflow: hidden;
-    letter-spacing: 0.5px;
-}
-
-.btn-order::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: 0.5s;
-}
-
-.btn-order:hover::before {
-    left: 100%;
+    box-shadow: 0 6px 20px rgba(255, 107, 139, 0.25);
 }
 
 .btn-order:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 35px rgba(255, 107, 139, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 139, 0.4);
     letter-spacing: 1px;
 }
 
 .btn-order i {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
 }
 
-/* Footer - СТИЛЬНЫЙ */
+/* Footer - более стильный */
 .site-footer {
-    background: linear-gradient(135deg, 
-        rgba(90, 85, 96, 0.95) 0%, 
-        rgba(58, 53, 64, 0.95) 100%);
+    background: linear-gradient(135deg, #5a5560 0%, #3a3540 100%);
     color: white;
-    padding: 60px 0 30px;
+    padding: 50px 0 30px;
     margin-top: auto;
     border-top: 5px solid #ff6b8b;
-    position: relative;
-    overflow: hidden;
-}
-
-.site-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ff6b8b' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-    opacity: 0.3;
-    z-index: 0;
 }
 
 .footer-container {
@@ -455,18 +373,15 @@ body::before {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 50px;
-    position: relative;
-    z-index: 1;
 }
 
 .footer-section h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 25px;
     color: #ffd6e0;
     font-weight: 600;
     position: relative;
-    padding-bottom: 12px;
-    letter-spacing: 0.5px;
+    padding-bottom: 10px;
 }
 
 .footer-section h3::after {
@@ -474,15 +389,14 @@ body::before {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 45px;
+    width: 40px;
     height: 3px;
     background: #ff6b8b;
     border-radius: 2px;
-    box-shadow: 0 2px 8px rgba(255, 107, 139, 0.3);
 }
 
 .footer-section p, .footer-section ul {
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 .footer-section ul {
@@ -490,15 +404,10 @@ body::before {
 }
 
 .footer-section ul li {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     display: flex;
     align-items: center;
-    gap: 12px;
-    transition: transform 0.3s ease;
-}
-
-.footer-section ul li:hover {
-    transform: translateX(5px);
+    gap: 10px;
 }
 
 .footer-section a {
@@ -509,24 +418,22 @@ body::before {
 
 .footer-section a:hover {
     color: #ff6b8b;
+    padding-left: 5px;
 }
 
 .footer-section i {
     color: #ff6b8b;
     width: 20px;
-    font-size: 1.1rem;
 }
 
 .copyright {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 50px;
     padding-top: 25px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #aaa;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     opacity: 0.8;
-    position: relative;
-    z-index: 1;
 }
 
 /* Responsive */
@@ -538,32 +445,29 @@ body::before {
     
     .main-nav ul {
         gap: 25px;
-        flex-wrap: wrap;
-        justify-content: center;
     }
     
     .hero {
-        padding: 80px 0;
-        border-radius: 0 0 30px 30px;
+        padding: 70px 0;
     }
     
     .hero h1 {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
     
     .hero p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         padding: 0 20px;
     }
     
     .section-title {
-        font-size: 2.2rem;
-        margin-bottom: 50px;
+        font-size: 2rem;
     }
     
-    .products-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .product-card {
+        width: 100%;
+        max-width: 350px;
+        min-height: auto;
     }
     
     .footer-container {
@@ -579,16 +483,20 @@ body::before {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
+    .product-card {
+        width: calc(50% - 40px);
+        max-width: none;
     }
 }
 
 @media (min-width: 1025px) {
     .products-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 30px;
+        justify-content: flex-start; /* Теперь выравнивание слева */
+    }
+    
+    .product-card {
+        width: calc(25% - 30px); /* 4 в ряд */
+        max-width: none;
     }
 }
 
@@ -596,7 +504,7 @@ body::before {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -607,31 +515,26 @@ body::before {
 .product-card {
     animation: fadeInUp 0.6s ease forwards;
     opacity: 0;
-    animation-fill-mode: both;
 }
 
 .product-card:nth-child(1) { animation-delay: 0.1s; }
 .product-card:nth-child(2) { animation-delay: 0.2s; }
 .product-card:nth-child(3) { animation-delay: 0.3s; }
 .product-card:nth-child(4) { animation-delay: 0.4s; }
-
 /* Стили для страниц "Обо мне" и "Контакты" */
 .content-page {
-    padding: 100px 20px;
+    padding: 80px 20px;
     max-width: 800px;
     margin: 0 auto;
-    min-height: 70vh;
-    position: relative;
 }
 
 .content-page h1 {
     color: #5a5560;
-    font-size: 2.8rem;
-    margin-bottom: 50px;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
     text-align: center;
     position: relative;
-    padding-bottom: 20px;
-    font-weight: 700;
+    padding-bottom: 15px;
 }
 
 .content-page h1::after {
@@ -640,115 +543,192 @@ body::before {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 150px;
-    height: 5px;
+    width: 100px;
+    height: 4px;
     background: linear-gradient(90deg, #ff6b8b, #ff8e53);
-    border-radius: 3px;
-    box-shadow: 0 4px 15px rgba(255, 107, 139, 0.3);
+    border-radius: 2px;
 }
 
-.page-content {
-    font-size: 1.15rem;
-    line-height: 1.9;
-    color: #555;
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 25px;
-    box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.page-content h2 {
+.content-page h2 {
     color: #5a5560;
-    margin: 40px 0 25px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid rgba(255, 214, 224, 0.5);
     font-size: 1.8rem;
-    font-weight: 600;
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 214, 224, 0.5);
 }
 
-.page-content h3 {
-    color: #5a5560;
-    margin: 35px 0 20px;
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.page-content ul {
-    list-style: none;
-    margin: 30px 0;
-    padding: 0;
-    background: linear-gradient(135deg, 
-        rgba(255, 249, 251, 0.9) 0%, 
-        rgba(255, 240, 245, 0.9) 100%);
+/* Стили для контактной информации */
+.contact-info {
+    background: white;
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
-.page-content li {
-    padding: 18px 0;
-    border-bottom: 1px solid rgba(255, 214, 224, 0.4);
+.contact-item {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff9fb;
+    border-radius: 15px;
     transition: transform 0.3s ease;
 }
 
-.page-content li:hover {
+.contact-item:hover {
     transform: translateX(10px);
+    background: #fff0f5;
 }
 
-.page-content li:last-child {
-    border-bottom: none;
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff6b8b 0%, #ff8e53 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
-.page-content li strong {
-    color: transparent;
-    min-width: 130px;
-    display: inline-block;
-    font-weight: 700;
-    background: linear-gradient(45deg, #ff6b8b, #ff8e53);
-    -webkit-background-clip: text;
-    background-clip: text;
+.contact-text h4 {
+    color: #5a5560;
+    margin-bottom: 5px;
     font-size: 1.1rem;
 }
 
-.page-content p {
-    margin-bottom: 25px;
-    color: #666;
+.contact-text p {
+    color: #777;
+    margin: 0;
 }
 
-.page-content p:last-child {
-    margin-bottom: 0;
+.working-hours {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
 }
 
-/* Декоративные элементы для страниц */
-.content-page::before {
+.hour-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Стили для текста "Обо мне" */
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+.content-page {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 70vh;
+}
+
+.content-page h1 {
+    color: #5a5560;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.content-page h1::after {
     content: '';
     position: absolute;
-    top: 50px;
-    right: -100px;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, 
-        rgba(255, 182, 193, 0.2) 0%, 
-        transparent 70%);
-    z-index: -1;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b8b, #ff8e53);
+    border-radius: 2px;
 }
 
-.content-page::after {
-    content: '';
-    position: absolute;
-    bottom: 50px;
-    left: -100px;
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, 
-        rgba(255, 182, 193, 0.15) 0%, 
-        transparent 70%);
-    z-index: -1;
+.page-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.page-content h2, .page-content h3 {
+    color: #5a5560;
+    margin: 30px 0 15px;
+}
+
+/* Стили для контактной информации */
+.contact-info {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #fff9fb;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(10px);
+    background: #fff0f5;
+}
+
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff6b8b 0%, #ff8e53 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.contact-text h4 {
+    color: #5a5560;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.contact-text p {
+    color: #777;
+    margin: 0;
+}
+
+.working-hours {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.hour-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
 }
